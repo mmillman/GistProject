@@ -1,0 +1,16 @@
+<h1> Gists for <%= current_user.username %> </h1>
+
+<div class="sidebar"></div>
+<div class="content"></div>
+
+<script type="text/javascript">
+
+  var user_gists = <%= @user_gists.to_json.html_safe %>;
+
+  window.GP.initialize(
+    $(".sidebar"),
+    $(".content"),
+    user_gists
+  );
+
+</script>
