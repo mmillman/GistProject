@@ -15,4 +15,10 @@ class GistsController < ApplicationController
       end
     end
   end
+
+  def create
+     @gist = Gist.create!(:user_id => current_user.id, :title => params[:title], :gist_files_attributes => params[:gist_files]);
+     render :json => @gist, status: 200
+  end
+
 end

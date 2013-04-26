@@ -9,6 +9,7 @@ window.GP = {
 
     GP.Store.Gists = new GP.Collections.Gists(gistsData);
 
+
     GP.Store.Favorites = new GP.Collections.Favorites();
     GP.Store.Favorites.fetch({
       success: function () {

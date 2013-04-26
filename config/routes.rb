@@ -1,5 +1,5 @@
 GistProject::Application.routes.draw do
-  root :to => 'sessions#new'
+  root :to => 'gists#index'
   resources :gists do
     resource :favorite, :only => [:create, :destroy]
   end

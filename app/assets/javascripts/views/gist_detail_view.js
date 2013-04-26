@@ -40,7 +40,7 @@ GP.Views.GistDetailView = Backbone.View.extend ({
       var favoriteModel = GP.Store.Favorites.where({
         gist_id: that.model.get('id')
       })[0];
-      console.log("DELETE")
+
       favoriteModel.destroy();
       GP.Store.Favorites.remove(favoriteModel);
 
